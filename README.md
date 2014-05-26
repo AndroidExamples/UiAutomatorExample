@@ -39,7 +39,7 @@ If you are a test engineer, UiAutomator is the perfect tool to test Android appl
 In comparison to other testing frameworks, indepth tests are harder to write and don't allow the developer doing TDD. In UiAutomator you use UiSelectors to search for UiObjets. This selector is based on the View's text and content description. The problem  is that you can't reference the Views directly. You can only invoke a simplified set of methods on an UiObject. 
 But their are some upsides to this framework, you can leave your app sandbox and do all kind of stuff. For example: toggle on/off wifi, open other apps, test your activity for result, etc.. 
 
-Another upside is the usage of UiWatcher, this watcher listens to conditional events (primarely being ui changes, e.g. dialog showing up). This allows you to easily incoperate different scenario's within your testcases. I din't incorperate any examples of UiWatcher in this sample but the are easy to configure.
+Another upside is the usage of UiWatcher, this watcher listens to conditional events (primarely being ui changes e.g. warning dialog popping up). This allows you to easily incoperate a whole set of different scenario's within one testcase. I didn't incorperate any examples of UiWatcher in this sample but they are easily configured.
 
 Use UiAutomator only for specific tests and only if can't perform those tests with your favorable testing framework.
 
