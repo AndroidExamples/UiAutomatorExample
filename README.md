@@ -1,7 +1,7 @@
 UiAutomatorExample
 ==================
 
-An example using UI Automator for testing Android applications. I used the Api Demos application as subject to be tested. This application is packaged within any image distributed from Genymotion. I created this sample application to demonstrate UiAutomator to a colleague. My personal findings and notes are attached below.
+An example using UI Automator for testing Android applications. I used the Api Demos application as subject to be tested. This application is packaged within any image distributed from Genymotion. I created this sample application to demonstrate UiAutomator to a colleague. My personal findings are attached below.
 
 ##Running project with attached jar
 > adb push /Path/to/git/folder/UiAutomatorExample.jar /data/local/tmp
@@ -41,6 +41,5 @@ But their are some upsides to this framework, you can leave your app sandbox and
 
 Another upside is the usage of UiWatcher, this watcher listens to conditional events (primarely being ui changes, e.g. dialog showing up). This allows you to easily incoperate different scenario's within your testcases. I din't incorperate any examples of UiWatcher in this sample but the are easy to configure.
 
-Final Thought: I would only use UiAutomator for specific tests and only if my current favorable testing framework is to limited to perform the task. Basically comes down to a limitation due to the sandbox model. 
-
+Use UiAutomator only for specific tests and only if can't perform your test with your current favorable testing framework.
 
