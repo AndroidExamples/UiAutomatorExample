@@ -4,7 +4,7 @@ UiAutomatorExample
 An example using UI Automator for testing Android applications. I used the Api Demos application as subject to be tested. This application is packaged within any image distributed from Genymotion. I created this sample application to demonstrate UiAutomator to a colleague. My personal findings and notes are attached below.
 
 ##Running project with attached jar
-> adb push /Users/path/to/git/folder/UiAutomatorExample.jar /data/local/tmp
+> adb push /Path/to/git/folder/UiAutomatorExample.jar /data/local/tmp
 
 > adb shell uiautomator runtest UiAutomatorExample.jar -c com.tobrun.android.test.uiautomator.ApiDemosTest
 
@@ -36,10 +36,11 @@ Copy the jar to the SD-card and run the test
 UiAutomator is the perfect tool to test Android applications if you are a test engineer. It requires a small amount of java and Android knowledge to program. The syntax/funcionalities are limited, but it we be enough to perform the typical "bussiness-as-usual" tests. 
 
 ###Developer
-In comparison to other testing frameworks, tests are harder to write and don't allow the developer doing TDD. In UiAutomator you use UiSelectors to search for UiObjets. The search is based on text and content descriptions of Views, but the problem their is that you can't reference the Views directly. You can only invoke a simplified set of methods on UIObject. 
+In comparison to other testing frameworks, indepth tests are harder to write and don't allow the developer doing TDD. In UiAutomator you use UiSelectors to search for UiObjets. The selector is based on the View's texts and content descriptions. The problem  is that you can't reference the Views directly. You can only invoke a simplified set of methods on an UiObject. 
+But their are some upsides to this framework, you can leave your app sandbox and do all kind of stuff. For example: toggle on/off wifi, open other apps, test your activity for result, etc.. 
 
-But their are some upsides to this framework. You can leave your app sandbox and do all kind of stuff. For example: toggle on/off wifi, open other apps, test your activity for result etc. 
+Another upside is the usage of UiWatcher, this watcher listens to conditional events (primarely being ui changes, e.g. dialog showing up). This allows you to easily incoperate different scenario's within your testcases. I din't incorperate any examples of UiWatcher in this sample but the are easy to configure.
 
-Another upside to UiAutomator is the usage of UiWatcher, this watcher listens to conditional events (primarely being ui changes, e.g. dialog showing up). You can easily incoperate different scenario's within your testcases.
+Final Thought: I would only use UiAutomator for specific tests and only if my current favorable testing framework is to limited to perform the task. Basically comes down to a limitation due to the sandbox model. 
 
 
