@@ -1,8 +1,15 @@
 UiAutomatorExample
 ==================
 
-An example using UI Automator for testing Android applications. I uses the Api Demos application that is packaged with the images from Genymotion. 
+An example using UI Automator for testing Android applications. I used the Api Demos application as subject to testing. This application is packaged within any distributed image from Genymotion. I created this sample application to demonstrate UiAutomator to a colleague. My personal findings and notes are attached below.
 
+##Running project with attached jar
+> adb push /Users/path/to/git/folder/UiAutomatorExample.jar /data/local/tmp
+
+> adb shell uiautomator runtest UiAutomatorExample.jar -c com.tobrun.android.test.uiautomator.ApiDemosTest
+
+
+##Build the project from source
 ###Dependencies
 First add the following dependencies to the project:
 > JUnit 3
